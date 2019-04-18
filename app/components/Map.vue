@@ -8,9 +8,8 @@
     </StackLayout>
   </Page> -->
   <Page class="page">
-        <!-- <ActionBar class="action-bar" title="People Around You">
-            <NavigationButton visibility="collapsed"></NavigationButton>
-        </ActionBar> -->
+        <ActionBar class="action-bar" title="People Around You                     Logout" @tap="logoutApp()">
+        </ActionBar>
         <GridLayout>
                 <Mapbox
                     accessToken="sk.eyJ1IjoiZmZkc2F0diIsImEiOiJjanVsbGozMW8yOGVqNGV1anp6MXozNGM2In0.KZi-vKWWuC_WB-awjLwauQ"
@@ -27,7 +26,6 @@
                     @mapReady="onMapReady($event)">
                 </Mapbox>
         </GridLayout>
-        <!-- <Button  text="Logout" class="logout" @tap="logoutApp()" /> -->
     </Page>
 </template>
 
