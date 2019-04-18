@@ -47,6 +47,7 @@
                         style="horizontal-align: left" class="sidebar"/>
                 </StackLayout>
             </RadSideDrawer>
+            <Button text="List View" @tap="openListView"></Button>
         </GridLayout>
 
     </Page>
@@ -63,6 +64,7 @@ import Young from './Young';
 import Clara from './Clara';
 import Aaron from './Aaron';
 import Shawn from './Shawn';
+import ListView from './ListView';
 import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
 Vue.use(RadSideDrawer);
 export default {
@@ -73,6 +75,9 @@ export default {
     ...mapState(["isLoggedIn"])    
   },
   methods: {
+      openListView() {
+          this.$navigateTo(ListView);
+      },
     logoutApp() {
       this.$authService.logout()
     },
